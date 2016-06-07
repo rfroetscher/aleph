@@ -38,6 +38,8 @@
       = render partial: 'snippets/index'
     %script#comments-template{type: 'text/ng-template'}
       = render partial: 'queries/comments'
+    %script#tablesIndex{type: 'text/ng-template'}
+      = render partial: 'tables/index'
     :javascript
       window.flash = #{flash.to_hash.to_json};
   %body{ 'ng-controller' => 'BodyController',
@@ -50,6 +52,9 @@
             %a.pull-left{href: '#'}
               %img.brand-logo{src: '/aleph.png'}
             %a.navbar-brand{href: '/'} ALEPH
+          %a.navbar-text{href: '/tables', 'ng-class' => "{active: pathIncludes('tables')}"}
+            %span.glyphicon.glyphicon-hdd.glyphicons-lg.glyphicon-low
+            &nbsp;Tables
           %a.navbar-text{href: '/queries', 'ng-class' => "{active: pathIncludes('queries')}"}
             %span.glyphicon.glyphicon-question-sign.glyphicons-lg.glyphicon-low
             &nbsp;Queries

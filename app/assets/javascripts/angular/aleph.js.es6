@@ -85,6 +85,12 @@
           controller: 'SnippetIndexController',
           controllerAs: 'snippetIdxCtrl'
         })
+        .when('/tables', {
+          title: 'Tables',
+          templateUrl: 'tablesIndex',
+          controller: 'TablesIndexController',
+          controllerAs: 'tablesIdxCtrl'
+        })
         .otherwise('/queries');
     }]);
 }(angular));

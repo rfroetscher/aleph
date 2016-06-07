@@ -30,6 +30,10 @@
       'alephServices.alertResource',
       'alephServices.alert',
 
+      // tables
+      'alephServices.tableResource',
+      'alephServices.table',
+
       //snippets
       'alephServices.aceSnippetManager',
 

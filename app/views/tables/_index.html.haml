@@ -1,0 +1,8 @@
+.tables-index
+  .col-md-10.index-items.top10
+    %ul{ 'infinite-scroll' => 'alertIdxCtrl.pagination.loadMore()',
+         'infinite-scroll-distance' => '0.5' }
+      %li.item-header
+        = render partial: 'tables/index_sort_bar'
+      %li.item-container{ 'ng-repeat' => 'alert in alertIdxCtrl.pagination.items()' }
+        = render partial: 'tables/index_item'
